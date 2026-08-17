@@ -1,0 +1,4 @@
+{
+  "name": "Story",
+  "install": "chapters=$(ls chapter*.txt | sort -V); echo \"Assembling story from:\"; printf ' - %s\\n' $chapters; : > story.txt; for f in $chapters; do cat \"$f\" >> story.txt; printf '\\n' >> story.txt; done; echo '--- story.txt ---'; cat story.txt; wc -l -w story.txt"
+}
